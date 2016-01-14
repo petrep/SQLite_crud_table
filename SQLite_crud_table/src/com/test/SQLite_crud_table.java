@@ -17,13 +17,9 @@
 
 package com.test;
 
-
 import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 public class SQLite_crud_table {
 
@@ -32,77 +28,6 @@ public class SQLite_crud_table {
 
 	public static void main(String[] args) throws SQLException {
 		System.out.println("testing starts..");
-//		makeConnection();
-//		runSQL();
-//		closeConnection();
 		FORMEntities sForm = new FORMEntities();
 	}
-
-//	public static void makeConnection() throws SQLException {
-//
-//		// SQLite3 section start
-//		String driver = "org.sqlite.JDBC";
-////		String url = "jdbc:sqlite:db\\test.db";
-////		String userName = "";
-////		String password = "";
-//		// SQLite3 section end
-//
-//		try {
-//			Class.forName(driver);
-//			conn = DriverManager.getConnection(url, userName, password);
-//			System.out
-//					.println("Connected to the database!");
-//			DatabaseMetaData dbm = conn.getMetaData();
-//			rs = dbm.getTables(null, null, "%", new String[] { "TABLE" });
-//			while (rs.next()) {
-//				//System.out.println(rs.getString("TABLE_NAME"));
-//			}
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		} finally {
-//
-//			rs.close();
-//		}
-//
-//	}
-//
-//	private static void runSQL() throws SQLException {
-//		int iTimeout = 30;
-//		//String sVACUUM = "VACUUM table2";
-//		String sMakeSelect = "SELECT rowid as myrowid,* FROM table2";
-//
-//		// create a database connection
-//
-//		try {
-//			Statement stmt = conn.createStatement();
-//			try {
-//				stmt.setQueryTimeout(iTimeout);
-//				//int rs2 = stmt.executeUpdate(sVACUUM);
-//				ResultSet rs = stmt.executeQuery(sMakeSelect);
-//				
-//				try {
-//					while (rs.next()) {
-//						String sResult = rs.getString("myrowid");
-//						System.out.println(sResult);
-//					}
-//				} finally {
-//					try {
-//						rs.close();
-//					} catch (Exception ignore) {
-//					}
-//				}
-//			} finally {
-//				try {
-//					stmt.close();
-//				} catch (Exception ignore) {
-//				}
-//			}
-//		} finally {
-//
-//		}
-//	}
-//
-//	public static void closeConnection() throws SQLException {
-//		conn.close();
-//	}
 }
