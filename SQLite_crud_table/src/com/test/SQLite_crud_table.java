@@ -15,6 +15,10 @@
 // TODO: create a table layout? review logic.. add logic for update operations, implement disconnect,
 // because disconnect is currently never called
 
+// Update method is now working, the disconnect method as well.
+// For now, I decided to leave this project as is, it is working, and I don't necessarily need to 
+// implement a swing table at this point.
+
 package com.test;
 
 import java.sql.Connection;
