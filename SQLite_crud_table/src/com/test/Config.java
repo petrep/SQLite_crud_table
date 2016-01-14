@@ -9,4 +9,6 @@ public class Config {
 
     public static final String connection_url = "jdbc:sqlite:" + DATABASE_SERVER + "\\" + DATABASE_NAME;
     //String url = "jdbc:sqlite:db\\test.db";
+    
+    
 }

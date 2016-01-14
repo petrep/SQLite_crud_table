@@ -37,42 +37,49 @@ public class DBUtilities {
 		try {
 			statement = connection.createStatement();
 
-		ResultSet rs2 = statement.executeQuery(sql_stmt);
+			resultSet = statement.executeQuery(sql_stmt);
 
-		try {
-			while (rs2.next()) {
-				sResult = rs2.getInt("max(rowid)");
+			try {
+				while (resultSet.next()) {
+					sResult = resultSet.getInt("max(rowid)");
+				}
+			} finally {
+				try {
+					resultSet.close();
+				} catch (Exception ignore) {
+				}
 			}
 		} finally {
 			try {
-				rs2.close();
+				statement.close();
 			} catch (Exception ignore) {
 			}
 		}
-	} finally {
-		try {
-			statement.close();
-		} catch (Exception ignore) {
-		}
-	}
 
 		return sResult;
 	}
-	
-	
 
-//	public void disconnectFromDatabase() {
-//		if (connection != null) {
-//			try {
-//				resultSet.close();
-//				statement.close();
-//				connection.close();
-//			} catch (SQLException sqlexception) {
-//				System.out.println(sqlexception.getMessage());
-//			} finally {
-//				System.out.println("disconnected");
-//			}
-//		}
-//	}
+	public void disconnectFromDatabase() {
+		if (connection != null) {
+			try {
+				if (resultSet == null) {
+//					   System.out.println("No records found");
+					} else {
+						resultSet.close();
+					}
+				if (statement == null) {
+//					   System.out.println("No records found");
+					} else {
+						statement.close();
+					}
+
+				connection.close();
+			} catch (SQLException sqlexception) {
+				System.out.println(sqlexception.getMessage());
+			} finally {
+				System.out.println("disconnected");
+			}
+		}
+	}
 
 }

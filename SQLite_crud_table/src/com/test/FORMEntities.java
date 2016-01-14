@@ -19,6 +19,7 @@ public class FORMEntities {
 		System.out.println("1 - List the content of the table");
 		System.out.println("2 - Add a new row");
 		System.out.println("3 - Delete a row");
+		System.out.println("4 - Exit program");
 		System.out.println("Enter your selection: ");
 		int n = reader.nextInt();
 		System.out.println("You have entered: " + n);
@@ -35,7 +36,14 @@ public class FORMEntities {
 			System.out.println("This row will be deleted: " + deleteRowIndex);
 			deleteRow(deleteRowIndex);
 		}
-
+		if (n == 4) {
+			System.out.println("Exiting..");
+			DBUtilities dbUtilities = new DBUtilities();
+			dbUtilities.disconnectFromDatabase();			
+			System.exit(0);
+		}
+		
+		initComponents();
 	}
 
 	
