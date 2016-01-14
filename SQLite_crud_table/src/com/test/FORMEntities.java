@@ -84,5 +84,19 @@ public class FORMEntities {
 		// loadTable();
 	}
 
+	private void updateRow(int deleteRowIndex) throws SQLException {
+//		String vacuum_stmt = "VACUUM 'table2'";
+//		String sql_stmt = "DELETE FROM `table2` WHERE `_rowid_`='"+ deleteRowIndex + "';";
+//
+//		DBUtilities dbDeleteRow = new DBUtilities();
+//		dbDeleteRow.ExecuteSQLStatement(vacuum_stmt);
+//		dbDeleteRow.ExecuteSQLStatement(sql_stmt);	
+//		dbDeleteRow.ExecuteSQLStatement(vacuum_stmt);
+		
+		// I think this is the place to update the table, like:
+		// fireTableStructureChanged();  or
+		// loadTable();
+	}
+
 
 }
