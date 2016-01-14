@@ -53,8 +53,8 @@ public class ResultSetTableModel {
 
 			try {
 				while (rs.next()) {
-					String sResult = rs.getString("orig");
-					String sResult2 = rs.getString("translated");
+					String sResult = rs.getString("col1");
+					String sResult2 = rs.getString("col2");
 					System.out.println(sResult + " " + sResult2);
 				}
 			} finally {

@@ -43,7 +43,7 @@ public class FORMEntities {
 		// String sql_stmt = "INSERT INTO table2 (orig, translated) VALUES
 		// (a9,b9 );";
 
-		String sql_stmt = "INSERT INTO `table2`(`orig`,`translated`)";
+		String sql_stmt = "INSERT INTO `table2`(`col1`,`col2`)";
 
 		// sql_stmt += " VALUES ('" + txtFullName.getText() + "','" +
 		// cboGender.getSelectedItem().toString() + "','" +
